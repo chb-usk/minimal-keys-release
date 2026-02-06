@@ -77,6 +77,10 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
+
+        &zip_temp_layer {
+            status = "okay";
+        };
     };
 
     keymap {
@@ -140,10 +144,10 @@
             >;
         };
 
-        MOUSE {
+MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB4/* ← これを押している間だけスクロールモード */
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
