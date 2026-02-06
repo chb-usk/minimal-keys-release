@@ -77,10 +77,8 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
+    };
 
-　　　}; // ここで behaviors ブロックを閉じる
-
-    // &zip_temp_layer は behaviors の外側で定義します
     &zip_temp_layer {
         status = "okay";
     };
