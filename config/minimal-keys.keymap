@@ -79,7 +79,7 @@
         };
 
         zip_temp_layer: zip_temp_layer {
-            compatible = "zmk,behavior-temp-layer";
+            compatible = "zmk,input-processor-temp-layer";
             #binding-cells = <2>;
             #input-processor-cells = <2>;
         };
