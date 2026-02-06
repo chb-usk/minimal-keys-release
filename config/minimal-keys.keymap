@@ -81,8 +81,9 @@
         zip_temp_layer: zip_temp_layer {
             compatible = "zmk,behavior-temp-layer";
             #binding-cells = <2>;
+            #input-processor-cells = <2>;
         };
-    }; // behaviorsブロックを閉じる（全角スペースを削除）
+    };
 
     keymap {
         compatible = "zmk,keymap";
