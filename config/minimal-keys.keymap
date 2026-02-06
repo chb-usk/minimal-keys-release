@@ -78,10 +78,12 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
 
-        &zip_temp_layer {
-            status = "okay";
-        };
-    };
+　　　}; // ここで behaviors ブロックを閉じる
+
+    // &zip_temp_layer は behaviors の外側で定義します
+    &zip_temp_layer {
+        status = "okay";
+    }
 
     keymap {
         compatible = "zmk,keymap";
