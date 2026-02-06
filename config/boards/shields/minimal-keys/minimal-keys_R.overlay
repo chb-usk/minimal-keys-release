@@ -43,6 +43,9 @@
     trackball_listener {
         compatible = "zmk,input-listener";
         device = <&trackball>;
+        /* Automouse設定：ボールを動かすと自動で Layer 6 (MOUSE) へ切り替え */
+        /* 600ms間ボールを動かさないと元のレイヤーに戻ります */
+        input-processors = <&zip_temp_layer 6 600>;
     };
 };
 
@@ -60,6 +63,7 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        scroll-layers = <3>;
+        /* ★ここをコメントアウトまたは削除します */
+        /* scroll-layers = <3>; */
     };
 };
