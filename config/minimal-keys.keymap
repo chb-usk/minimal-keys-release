@@ -69,19 +69,19 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             tap-ms = <20>;
-        };
-
+        }
         scroll: scroll {
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCROLL";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
-    };
+    }; // behaviorsブロックを閉じる（全角スペースを削除）
 
+/* --- ここが修正ポイント： / { ... } の外に出します --- */
     &zip_temp_layer {
         status = "okay";
-    };
+};
 
     keymap {
         compatible = "zmk,keymap";
