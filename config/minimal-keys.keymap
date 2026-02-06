@@ -78,12 +78,14 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
     }; // behaviorsブロックを閉じる（全角スペースを削除）
-
-/* --- ここが修正ポイント： / { ... } の外に出します --- */
-    &zip_temp_layer {
-        status = "okay";
 };
 
+/* --- ここが修正ポイント： / { ... } の外に出します --- */
+&zip_temp_layer {
+    status = "okay";
+};
+
+/{
     keymap {
         compatible = "zmk,keymap";
 
