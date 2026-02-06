@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <behaviors/pointing.dtsi>
 
 #undef ZMK_POINTING_DEFAULT_SCRL_VAL
 
@@ -78,15 +77,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
         };
+
+        zip_temp_layer: zip_temp_layer {
+            compatible = "zmk,behavior-temp-layer";
+            #binding-cells = <2>;
+        };
     }; // behaviorsブロックを閉じる（全角スペースを削除）
-};
 
-/* --- ここが修正ポイント： / { ... } の外に出します --- */
-&zip_temp_layer {
-    status = "okay";
-};
-
-/{
     keymap {
         compatible = "zmk,keymap";
 
