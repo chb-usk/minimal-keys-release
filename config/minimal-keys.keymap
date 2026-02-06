@@ -83,7 +83,7 @@
     // &zip_temp_layer は behaviors の外側で定義します
     &zip_temp_layer {
         status = "okay";
-    }
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -149,9 +149,9 @@
 MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB4/* ← これを押している間だけスクロールモード */
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &mkp MB4
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans                                &trans
             >;
         };
     };
