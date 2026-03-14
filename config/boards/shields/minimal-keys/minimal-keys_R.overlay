@@ -63,9 +63,9 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&xiao_d 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         /* ★ここをコメントアウトまたは削除します */
-        scroll-layers = <3>;
+        /* scroll-layers = <3>; */
         
         /* Layer 7 (SCROLL) がアクティブな時だけホイールとして機能させる */
-        /* scroll-layers = <7>; */
+        scroll-layers = <7>;
     };
 };
