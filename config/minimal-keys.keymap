@@ -78,6 +78,21 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
+        // Mac用（ナチュラルスクロール対応）
+        scroll_mac: scroll_mac {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            tap-ms = <20>;
+        };
+
+        // Windows用（方向を反転）
+        scroll_win: scroll_win {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            tap-ms = <20>;
+
         zip_temp_layer: zip_temp_layer {
             compatible = "zmk,input-processor-temp-layer";
             #binding-cells = <2>;
