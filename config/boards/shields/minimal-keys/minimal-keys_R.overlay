@@ -48,6 +48,27 @@
     };
 };
 
+/* 1. まずノードを定義（作成）する */
+/ {
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        #binding-cells = <2>;
+    };
+};
+
+/* 2. 定義したラベルに対して設定を追加する */
+&zip_temp_layer {
+    /* マウスレイヤーに留まりたい右手の主要キーを登録 */
+    excluded-positions = <
+        7 9        /* PageUp / PageDown */
+        19 20 21 22 /* クリック系とスクロール切り替え */
+        31 33      /* ブラウザの戻る・進む */
+    >;
+/* これが「not-prior-to-key-down-ms」の代わりになります */
+    require-prior-idle-ms = <350>;
+};
+
 &spi0 {
     status = "okay";
     compatible = "nordic,nrf-spim";
