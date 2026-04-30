@@ -44,7 +44,7 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         /* ボールを動かすと自動で Layer 6 (MOUSE) へ */
-        input-processors = <&zip_temp_layer 6 600>;
+        input-processors = <&zip_temp_layer 6 5000>;
     };
 };
 
@@ -61,9 +61,9 @@
 &zip_temp_layer {
     /* マウスレイヤーに留まりたい右手の主要キーを登録 */
     excluded-positions = <
-        7 9        /* PageUp / PageDown */
-        19 20 21 22 /* クリック系とスクロール切り替え */
-        31 33      /* ブラウザの戻る・進む */
+        19
+        20
+        21
     >;
 /* これが「not-prior-to-key-down-ms」の代わりになります */
     require-prior-idle-ms = <350>;
