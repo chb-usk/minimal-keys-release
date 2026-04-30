@@ -66,7 +66,7 @@
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
         };
@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "SCROLL";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
 
         zip_temp_layer: zip_temp_layer {
@@ -91,7 +91,7 @@
         default_layer_mac {
             bindings = <
 &kp Q             &kp W             &kp E         &kp R               &kp T                                      &kp Y                &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S             &kp D         &kp F               &kp G        &lt 6 SQT        &kp SEMI     &kp H                &kp J  &kp K      &kp L    &kp MINUS
+&kp A             &kp S             &kp D         &lt 6 F             &kp G        &kp SQT          &kp SEMI     &kp H                &kp J  &kp K      &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V               &kp B        &kp BACKSPACE    &kp DELETE   &kp N                &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp TAB           &kp LEFT_CONTROL  &kp LEFT_ALT  &mt LEFT_GUI LANG2  &lt 2 SPACE  &lt 3 ENTER      &lt 4 ENTER  &mt RIGHT_GUI LANG1                             &kp RIGHT_CONTROL
             >;
@@ -102,7 +102,7 @@
         default_layer_win {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                   &kp T                                        &kp Y                    &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &lt 6 SQT        &kp SEMICOLON  &kp H                    &kp J  &kp K      &kp L    &kp MINUS
+&kp A             &kp S         &kp D         &lt 6 F                 &kp G        &kp SQT          &kp SEMICOLON  &kp H                    &kp J  &kp K      &kp L    &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp BACKSPACE    &kp DELETE     &kp N                    &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &kp TAB           &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LANG2  &lt 2 SPACE  &lt 3 ENTER      &lt 4 ENTER    &mt RIGHT_CONTROL LANG1                             &kp RIGHT_ALT
             >;
