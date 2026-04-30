@@ -57,12 +57,14 @@
     };
 };
 
-/* 2. 定義したラベルに対して設定を追加する */
 &zip_temp_layer {
-    /* マウスレイヤーに留まりたい右手の主要キーを登録 */
-    excluded-positions = <
+　　　/* クリックを有効にするため excluded-positions は空にするか調整 */
+    excluded-positions = < >;
+
+    /* 最下段のキー（34〜42番）を押した瞬間にレイヤーを戻す */
+    resettable-positions = <
+        37 38 39 40 41
     >;
-/* これが「not-prior-to-key-down-ms」の代わりになります */
     require-prior-idle-ms = <350>;
 };
 
