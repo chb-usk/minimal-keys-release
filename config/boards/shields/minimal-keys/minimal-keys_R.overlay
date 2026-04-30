@@ -60,7 +60,7 @@
 /* 2. 定義したラベルに対して設定を追加する */
 &zip_temp_layer {
     /* マウスレイヤーに留まりたい右手の主要キーを登録 */
-    excluded-positions = <
+    excluded-positions = < >;
 
     resettable-positions = <37 38 39 40 41>;
 
