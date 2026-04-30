@@ -61,9 +61,6 @@
 &zip_temp_layer {
     /* マウスレイヤーに留まりたい右手の主要キーを登録 */
     excluded-positions = <
-        19
-        20
-        21
     >;
 /* これが「not-prior-to-key-down-ms」の代わりになります */
     require-prior-idle-ms = <350>;
