@@ -62,9 +62,7 @@
     excluded-positions = < >;
 
     /* 最下段のキー（34〜42番）を押した瞬間にレイヤーを戻す */
-    resettable-positions = <
-        37 38 39 40 41
-    >;
+    resettable-positions = <37 38 39 40 41>;
     require-prior-idle-ms = <350>;
 };
 
