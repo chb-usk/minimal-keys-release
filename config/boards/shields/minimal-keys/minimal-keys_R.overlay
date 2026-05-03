@@ -61,7 +61,7 @@
     /* 2. マウスレイヤーに留まりたいキー（MB1/MB2/MB3）だけを登録 */
     /* これにより、これ以外のキーを押すと自動的にレイヤーを抜けるようになります */
     /* 19:MB1, 20:MB3, 21:MB2 */
-    excluded-positions = <19 20 21>;
+    excluded-positions = <18 19 20 21>;
 
     /* 3. 前回の個別指定（resettable-positions）は不要になるので削除または空にする */
     /* resettable-positions = < >;
