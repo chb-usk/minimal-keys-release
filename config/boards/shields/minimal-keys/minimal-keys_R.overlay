@@ -44,11 +44,11 @@
         compatible = "zmk,input-listener";
         device = <&trackball>;
         /* ボールを動かすと自動で Layer 6 (MOUSE) へ */
-        input-processors = <&zip_temp_layer 6 1500>;
+        input-processors = <&zip_temp_layer 6 100>;
     };
 };
 
-/* 1. まずノードを定義（作成）する */
+
 / {
     zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
@@ -57,12 +57,19 @@
     };
 };
 
-/* 2. 定義したラベルに対して設定を追加する */
 &zip_temp_layer {
-    /* マウスレイヤーに留まりたい右手の主要キーを登録 */
-    excluded-positions = < >;
+    /* 1. 継続時間を5000ms（5秒）に設定 */
+    time-to-live-ms = <5000>;
 
-    /* not-prior-to-key-down-msの代替 */
+    /* 2. マウスレイヤーに留まりたいキー（MB1/MB2/MB3）だけを登録 */
+    /* これにより、これ以外のキーを押すと自動的にレイヤーを抜けるようになります */
+    /* 19:MB1, 20:MB3, 21:MB2 */
+    excluded-positions = <19 20 21>;
+
+    /* 3. 前回の個別指定（resettable-positions）は不要になるので削除または空にする */
+    resettable-positions = < >;
+
+    /* アイドル時間の制約（必要に応じて調整） */
     require-prior-idle-ms = <350>;
 };
 
