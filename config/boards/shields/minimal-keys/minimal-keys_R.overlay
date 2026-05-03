@@ -64,7 +64,7 @@
     excluded-positions = <19 20 21>;
 
     /* 3. 前回の個別指定（resettable-positions）は不要になるので削除または空にする */
-    resettable-positions = < >;
+    /* resettable-positions = < >;
 
     /* アイドル時間の制約（必要に応じて調整） */
     require-prior-idle-ms = <350>;
