@@ -77,12 +77,6 @@
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
-
-        zip_temp_layer: zip_temp_layer {
-            compatible = "zmk,input-processor-temp-layer";
-            #binding-cells = <2>;
-            #input-processor-cells = <2>;
-        };
     };
 
     keymap {
@@ -112,10 +106,10 @@
 
         SYMBOL {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
-&kp ESCAPE        &trans            &trans            &trans            &trans            &trans    &trans  &kp MINUS         &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&trans            &trans            &trans            &trans            &trans            &trans    &trans  &kp LS(MINUS)     &kp LS(EQUAL)     &kp APOS          &kp SEMI           &kp GRAVE
-&trans            &trans            &trans            &trans            &trans            &trans    &trans  &trans                                                                   &trans
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
+&kp ESCAPE        &trans            &trans            &trans            &trans            &trans    &trans  &kp MINUS         &kp EQUAL         &kp LEFT_BRACE    &kp RIGHT_BRACE   &kp BACKSLASH
+&trans            &trans            &trans            &trans            &trans            &trans    &trans  &kp LS(MINUS)     &kp LS(EQUAL)     &kp APOS          &kp SEMICOLON     &kp GRAVE
+&trans            &trans            &trans            &trans            &trans            &trans    &trans  &trans                                                                  &trans
             >;
         };
 
