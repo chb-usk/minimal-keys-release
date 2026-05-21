@@ -108,7 +108,7 @@
             bindings = <
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)                    &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
 &kp ESCAPE        &trans            &trans            &trans            &trans            &trans    &trans  &kp MINUS         &kp EQUAL         &kp LEFT_BRACE    &kp RIGHT_BRACE   &kp BACKSLASH
-&trans            &trans            &trans            &trans            &trans            &trans    &trans  &kp LS(MINUS)     &kp LS(EQUAL)     &kp APOS          &kp SEMICOLON     &kp LS(BACKSLASH)
+&trans            &trans            &trans            &trans            &trans            &trans    &trans  &kp LS(MINUS)     &kp LS(EQUAL)     &kp APOS          &kp SEMICOLON     &kp GRAVE
 &trans            &trans            &trans            &trans            &trans            &trans    &trans  &trans                                                                  &trans
             >;
         };
@@ -142,10 +142,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &kp PAGE_UP  &trans    &kp PAGE_DOWN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1     &mkp MB3  &mkp MB2       &mo 7
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(LBKT) &trans    &kp LG(RBKT)   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                        &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &kp PAGE_UP   &trans    &kp PAGE_DOWN  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1      &mkp MB3  &mkp MB2       &mo 7
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp LG(LBKT)  &trans    &kp LG(RBKT)   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                         &trans
             >;
         };
 
