@@ -48,15 +48,6 @@
     };
 };
 
-
-/ {
-    zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        #binding-cells = <2>;
-    };
-};
-
 &zip_temp_layer {
     /* 2. マウスレイヤーに留まりたいキー（MB1/MB2/MB3）だけを登録 */
     /* これにより、これ以外のキーを押すと自動的にレイヤーを抜けるようになります */
